@@ -1,7 +1,7 @@
 package br.com.dio.challenge.domain.bootcamp.activity;
 
 import br.com.dio.challenge.domain.bootcamp.Bootcamp;
-import br.com.dio.challenge.domain.bootcamp.DateTimeFormatUtils;
+import br.com.dio.challenge.domain.bootcamp.utils.DateTimeFormatUtils;
 import br.com.dio.challenge.domain.bootcamp.activity.enums.ActivityType;
 
 import java.time.Duration;

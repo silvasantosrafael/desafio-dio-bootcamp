@@ -1,4 +1,4 @@
-package br.com.dio.challenge.domain.bootcamp;
+package br.com.dio.challenge.domain.bootcamp.utils;
 
 import java.time.Duration;
 import java.time.LocalDate;

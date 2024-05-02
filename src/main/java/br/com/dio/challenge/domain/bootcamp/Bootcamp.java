@@ -2,6 +2,7 @@ package br.com.dio.challenge.domain.bootcamp;
 
 import br.com.dio.challenge.domain.bootcamp.activity.Content;
 import br.com.dio.challenge.domain.bootcamp.dev.Dev;
+import br.com.dio.challenge.domain.bootcamp.utils.DateTimeFormatUtils;
 import lombok.Getter;
 
 import java.time.LocalDate;
