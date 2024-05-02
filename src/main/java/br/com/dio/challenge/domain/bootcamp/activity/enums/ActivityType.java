@@ -7,6 +7,7 @@ import lombok.Getter;
 public enum ActivityType {
     COURSE("Curso"),
     CHALLENGE_DESIGN("Desafio de Projeto"),
+    CHALLENGE_CODE("Desafio de Código"),
     MENTORING("Mentoria");
 
     private final String typeName;

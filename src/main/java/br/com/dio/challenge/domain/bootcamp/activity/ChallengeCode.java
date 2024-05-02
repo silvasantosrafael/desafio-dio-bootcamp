@@ -4,14 +4,14 @@ import br.com.dio.challenge.domain.bootcamp.Bootcamp;
 import br.com.dio.challenge.domain.bootcamp.activity.enums.ActivityLevel;
 import br.com.dio.challenge.domain.bootcamp.activity.enums.ActivityType;
 
-public class Course extends Activity {
-    public Course(String title, String description, ActivityLevel activityLevel, int workload, Bootcamp bootcamp) {
+public class ChallengeCode extends Activity {
+    public ChallengeCode(String title, String description, ActivityLevel activityLevel, int workload, Bootcamp bootcamp) {
         super(title, description, activityLevel, workload, bootcamp);
-        this.activityType = ActivityType.COURSE;
+        this.activityType = ActivityType.CHALLENGE_CODE;
     }
 
     @Override
     public double calculateXp() {
-        return DEFAULT_XP + this.workload;
+        return DEFAULT_XP + (this.workload + 20d);
     }
 }

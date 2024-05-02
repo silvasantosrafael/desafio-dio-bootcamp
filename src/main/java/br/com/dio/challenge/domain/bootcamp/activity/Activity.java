@@ -2,28 +2,22 @@ package br.com.dio.challenge.domain.bootcamp.activity;
 
 import br.com.dio.challenge.domain.bootcamp.Bootcamp;
 import br.com.dio.challenge.domain.bootcamp.activity.enums.ActivityLevel;
-import br.com.dio.challenge.domain.bootcamp.activity.enums.ActivityType;
 
-public abstract class Activity {
-    private final String title;
-    private final String description;
-    protected ActivityLevel activityLevel;
-    protected ActivityType activityType;
+public abstract class Activity extends Content {
     protected int workload;
+    protected ActivityLevel activityLevel;
 
 
-    public Activity(String title, String description, Bootcamp bootcamp) {
-        this.title = title;
-        this.description = description;
-        bootcamp.addActivity(this);
+    public Activity(String title, String description, ActivityLevel activityLevel, int workload, Bootcamp bootcamp) {
+        super(title, description, bootcamp);
+        this.workload = workload;
+        this.activityLevel = activityLevel;
     }
 
     @Override
     public String toString() {
-        return "\t" + this.activityType.getTypeName() + "\n" +
-                "\tTitle: " + title + "\n" +
-                "\tDescription: " + description + "\n" +
-                (this.activityLevel != null? "\tLevel: " + this.activityLevel.getLevelName() + "\n" : "") +
-                (this.workload != 0 ? "\tWorkload: " + this.workload + " hrs": "");
+        return super.toString() +
+                (this.activityLevel != null ? "\tLevel: " + this.activityLevel.getLevelName() + "\n" : "") +
+                (this.workload != 0 ? "\tWorkload: " + this.workload + " hrs" : "");
     }
 }
